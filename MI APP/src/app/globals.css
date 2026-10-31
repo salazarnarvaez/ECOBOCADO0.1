@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf7f0;
+  --color-bark: #1d2a22;
+  --color-leaf: #166f4a;
+  --color-leaf-soft: #e6f3ec;
+  --color-sun: #f2a516;
+  --color-sun-soft: #fdf1d8;
+  --color-berry: #c2452d;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(22, 111, 74, 0.07), transparent 45%),
+    radial-gradient(circle at 88% 4%, rgba(242, 165, 22, 0.12), transparent 40%);
+  background-repeat: no-repeat;
+}
+
+@utility card {
+  border-radius: 1.5rem;
+  border: 1px solid rgb(29 42 34 / 0.08);
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgb(29 42 34 / 0.04), 0 12px 32px -24px rgb(29 42 34 / 0.35);
+}
+
+@utility chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid rgb(29 42 34 / 0.1);
+  background-color: #fff;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  background-color: var(--color-leaf);
+  color: #fff;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+@utility btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  border: 1px solid rgb(29 42 34 / 0.14);
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #0f5c3c;
+  transform: translateY(-1px);
+}
+
+.btn-ghost:hover {
+  border-color: rgb(29 42 34 / 0.3);
+}
+
+input,
+select,
+textarea {
+  border-radius: 0.85rem;
+  border: 1px solid rgb(29 42 34 / 0.14);
+  background-color: #fff;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+  width: 100%;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-leaf);
+  box-shadow: 0 0 0 3px rgb(22 111 74 / 0.14);
+}
+
+label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgb(29 42 34 / 0.55);
+}
